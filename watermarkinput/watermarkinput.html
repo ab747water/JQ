@@ -1,0 +1,31 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="../js/jquery-1.4.2.js"></script>
+<script language="JavaScript" type="text/javascript" src="./jquery.watermarkinput.js" />"></script>
+<script language="JavaScript">
+$(document).ready(function(){  
+ $("#name").Watermark("First");   
+ $("#age").Watermark("MI");  
+ $("#admin").Watermark("Last");  
+ 
+});
+</script>
+</head>
+<body>
+
+<div id="all">
+	<div id="form">
+		<form id="createForm" method="get" action="">
+		<table>
+			<tr><td>Name</td><td><input type="text" name="name" id="name" size="15" maxlength="15" /></td></tr>
+			<tr><td>Age</td><td><input type="text"name="age" id="age" size="2" maxlength="2" /></td></tr>
+			<tr><td>Admin</td><td><input type="text" name="admin" list="{true,false}" id="admin" /></td></tr>
+			
+		</table>
+		</form>
+	</div>
+</div>
+</body>
+</html>

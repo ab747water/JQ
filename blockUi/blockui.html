@@ -1,0 +1,38 @@
+
+<script type="text/javascript" src="../js/jquery-1.4.2.js"></script>
+<script type="text/javascript" src="../js/jquery.blockUI.js"></script>
+<script type="text/javascript">
+$(document).ready(function() { 
+    $('#demo1').click(function() { 
+        $.blockUI({ message: $('#loginForm') }); 
+ 
+        setTimeout($.unblockUI, 2000); 
+    }); 
+}); 
+$(document).ready(function() { 
+    $('#demo2').click(function() { 
+        $.blockUI({ css: { 
+            border: 'none', 
+            padding: '15px', 
+            backgroundColor: '#000', 
+            '-webkit-border-radius': '10px', 
+            '-moz-border-radius': '10px', 
+            opacity: .5, 
+            color: '#fff' 
+        } }); 
+ 
+        setTimeout($.unblockUI, 2000); 
+    }); 
+}); 
+</script>
+
+<body>unbolck時間都設為兩秒
+<br>
+Login Form
+<td><button id="demo1">Run</button></td>
+<div style="display: none;" id="loginForm">
+            <p><label>Username:</label><input type="text" name="demo1"></p>
+            <p><label>Password:</label><input type="text" name="demo1"></p>
+        </div>
+		<br>iPhoto (ish)<button id="demo2">Run</button>	
+		</body>

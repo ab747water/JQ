@@ -1,0 +1,22 @@
+<html>
+
+<!--[if IE]><script language="javascript" type="text/javascript" src="../excanvas.js"></script><![endif]-->
+<script type="text/javascript" src="../js/jquery-1.4.2.js"></script>
+<script language="javascript" type="text/javascript" src="../js/jqplot/excanvas.js"></script>
+<script type="text/javascript" src="../js/jqplot/jquery.jqplot.js"></script>
+<script type="text/javascript"> 
+$(document).ready(function(){
+$.jqplot('chart1b',  [[[1, 2],[3,5.12],[5,13.1],[7,33.6],[9,85.9],[11,219.9]]],
+//對應div的ID 與坐標群
+{ title:'Exponential Line',
+  axes:{yaxis:{min:-10, max:240}},
+  series:[{color:'#5FAB78'}]
+//圖表的屬性設定
+});
+});
+ </script> 
+	<body>
+	圖表
+	<div id="chart1b" style="width:400px;height:260px;"></div>
+	</body>
+	</html>

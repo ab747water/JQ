@@ -1,0 +1,124 @@
+<script type="text/javascript" src="../js/jquery-1.4.2.js"></script>
+<script type="text/javascript" src="../js/jquery.autotab.js"></script>
+<script type="text/javascript">
+<!--
+	$(function(){
+		// 手機號碼
+		$('#number_code').autotab({
+			target: 'number1', 
+			format: 'numeric'
+		});
+		$('#number1').autotab({
+			target: 'number2',
+			format: 'numeric', 
+			previous: 'number_code'
+		});
+		$('#number2').autotab({
+			target: 'text1',
+			previous: 'number1',
+			format: 'numeric'
+		});
+ 
+		// 只允許非數字(英文+符號)
+		$('#text1').autotab({
+			target: 'text2',
+			previous: 'number2',
+			format: 'text'
+		});
+		$('#text2').autotab({
+			target: 'text3',
+			format: 'text',
+			previous: 'text1'
+		});
+		$('#text3').autotab({
+			target: 'alpha1',
+			format: 'text',
+			previous: 'text2'
+		});
+ 
+		// 只允許英文
+		$('#alpha1').autotab({
+			target: 'alpha2',
+			format: 'alpha',
+			previous: 'text3'
+		});
+		$('#alpha2').autotab({
+			target: 'alpha3',
+			format: 'alpha',
+			previous: 'alpha1'
+		});
+		$('#alpha3').autotab({
+			target: 'alpha4',
+			format: 'alpha',
+			previous: 'alpha2'
+		});
+		$('#alpha4').autotab({
+			target: 'alpha5',
+			format: 'alpha',
+			previous: 'alpha3'
+		});
+		$('#alpha5').autotab({
+			target: 'alphanumeric1',
+			previous: 'alpha4',
+			format: 'alpha'
+		});
+ 
+		// 允許數字與英文(英文會自動轉大小)
+		$('#alphanumeric1').autotab({
+			target: 'alphanumeric2',
+			format: 'alphanumeric',
+			uppercase: true,
+			previous: 'alpha5'
+		});
+		$('#alphanumeric2').autotab({
+			target: 'alphanumeric3',
+			format: 'alphanumeric',
+			uppercase: true,
+			previous: 'alphanumeric1'
+		});
+		$('#alphanumeric3').autotab({
+			target: 'alphanumeric4',
+			format: 'alphanumeric',
+			uppercase: true,
+			previous: 'alphanumeric2'
+		});
+		$('#alphanumeric4').autotab({
+			target: 'alphanumeric5',
+			format: 'alphanumeric',
+			uppercase: true,
+			previous: 'alphanumeric3'
+		});
+		$('#alphanumeric5').autotab({
+			previous: 'alphanumeric4',
+			format: 'alphanumeric',
+			uppercase: true
+		});
+	});
+//-->
+</script>
+ 
+<body>
+	<div><strong>手機號碼:</strong></div>
+	<input type="text" name="number_code" id="number_code" maxlength="4" size="4" /> -
+	<input type="text" name="number1" id="number1" maxlength="3" size="3" /> -
+	<input type="text" name="number2" id="number2" maxlength="3" size="3" />
+ 
+	<div><strong>只允許非數字(英文+符號):</strong></div>
+	<input type="text" name="text1" id="text1" maxlength="5" size="4" /> -
+	<input type="text" name="text2" id="text2" maxlength="4" size="4" /> -
+	<input type="text" name="text3" id="text3" maxlength="5" size="4" />
+ 
+	<div><strong>只允許英文:</strong></div>
+	<input type="text" name="alpha1" id="alpha1" maxlength="5" size="4" /> -
+	<input type="text" name="alpha2" id="alpha2" maxlength="5" size="4" /> -
+	<input type="text" name="alpha3" id="alpha3" maxlength="5" size="4" /> -
+	<input type="text" name="alpha4" id="alpha4" maxlength="5" size="4" /> -
+	<input type="text" name="alpha5" id="alpha5" maxlength="5" size="4" />
+ 
+	<div><strong>允許數字與英文(英文會自動轉大小):</strong></div>
+	<input type="text" name="alphanumeric1" id="alphanumeric1" maxlength="5" size="4" /> -
+	<input type="text" name="alphanumeric2" id="alphanumeric2" maxlength="5" size="4" /> -
+	<input type="text" name="alphanumeric3" id="alphanumeric3" maxlength="5" size="4" /> -
+	<input type="text" name="alphanumeric4" id="alphanumeric4" maxlength="5" size="4" /> -
+	<input type="text" name="alphanumeric5" id="alphanumeric5" maxlength="5" size="4" />
+</body>

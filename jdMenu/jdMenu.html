@@ -1,0 +1,40 @@
+<script type="text/javascript" src="../js/jquery-1.4.2.js"></script>
+<script type="text/javascript" src="../js/jdMenu-1.4.1/jquery.jdMenu.js"></script>
+<script type="text/javascript" src="../js/jdMenu-1.4.1/jquery.dimensions.js"></script>
+	<script type="text/javascript" src="../js/jdMenu-1.4.1/jquery.positionBy.js"></script>
+	<script type="text/javascript" src="../js/jdMenu-1.4.1/jquery.bgiframe.js"></script>
+
+
+ <script type="text/javascript"> 
+$(function(){
+$('ul.jd_menu').jdMenu();
+// Add menu hiding on document click
+$(document).bind('click', function() {
+$('ul.jd_menu ul:visible').jdMenuHide();
+});
+});
+  </script> 
+	<body>
+
+<ul class="jd_menu">
+<li>Search Engines &raquo;
+<ul>
+<li><a href="http://www.google.com" target="_blank">Google</a></li>
+<li><a href="http://www.yahoo.com" target="_blank">Yahoo!</a></li>
+<li><a href="http://www.altavista.com" target="_blank">AltaVista</a></li>
+</ul>
+</li>
+<li>Google Products
+<ul>
+<li>Search &raquo;
+<ul>
+<li><a href="http://base.google.com" target="_blank">Base</a></li>
+<li><a href="http://code.google.com" target="_blank">Code</a></li>
+<li><a href="http://images.google.com" target="_blank">Images</a></li>
+</ul>
+</li>
+<li><a href="http://www.gmail.com" target="_blank">GMail</a></li>
+</ul>
+</li>
+</ul>
+</body>
